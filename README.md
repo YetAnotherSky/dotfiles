@@ -10,7 +10,11 @@
 
 ## Requirements ❗:
 
+<<<<<<< HEAD
 ```starship, brightnessctl, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, JetBrainsMono and FiraCode Nerd Fonts```
+=======
+```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, JetBrainsMono and FiraCode Nerd Fonts```
+>>>>>>> aa6d241 (Update for my dotfiles)
 
  - Link for starship: https://starship.rs/
  - Links for Nerd Fonts:
@@ -32,7 +36,7 @@
   
   ```bash
         git clone https://github.com/0x01sky/dotfiles && cd dotfiles
-        cp -r .config/i3 .config/rofi .config/polybar .config/ghostty .config/zathura .config/starship.toml .config/nvim "$HOME/.config/"
+        cp -r .config/i3 .config/rofi .config/polybar .config/ghostty .config/zathura .config/starship.toml .config/nvim .config/picom "$HOME/.config/"
   ```
 
 **Enjoy : - )**
