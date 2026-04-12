@@ -28,4 +28,4 @@ mkdir -p "$CONFIG"
 cp starship.toml "$CONFIG/"
 
 echo "[+] Dotfiles are installed, enjoy :) !"
-echo "[+] Adding more things soon :)"
+echo "[+] Adding more stuffs soon :)"
