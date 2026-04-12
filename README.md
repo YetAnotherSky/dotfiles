@@ -9,13 +9,7 @@
 <img width="1919" height="1079" alt="2026-03-25_02-42" src="https://github.com/user-attachments/assets/86187573-e6ce-47ec-8f86-ec60dcd65f33" />
 
 ## Requirements ❗:
-
-<<<<<<< HEAD
-```starship, brightnessctl, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, JetBrainsMono and FiraCode Nerd Fonts```
-=======
 ```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, JetBrainsMono and FiraCode Nerd Fonts```
->>>>>>> aa6d241 (Update for my dotfiles)
-
  - Link for starship: https://starship.rs/
  - Links for Nerd Fonts:
      - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
@@ -33,10 +27,14 @@
  - This is a genuine example and may also be applied to other config files !
 
 - Installation ⬇️:
-  
+  - Manual
   ```bash
         git clone https://github.com/0x01sky/dotfiles && cd dotfiles
         cp -r .config/i3 .config/rofi .config/polybar .config/ghostty .config/zathura .config/starship.toml .config/nvim .config/picom "$HOME/.config/"
   ```
-
+  - Automated
+   ```bash
+        git clone https://github.com/0x01sky/dotfiles && cd dotfiles
+        chmod +x install.sh && ./install.sh
+   ```
 **Enjoy : - )**
