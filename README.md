@@ -34,7 +34,7 @@
   ```
   - Automated
    ```bash
-        git clone https://github.com/0x01sky/dotfiles && cd dotfiles
-        chmod +x install.sh && ./install.sh
+        wget https://raw.githubusercontent.com/0x01sky/dotfiles/main/setup/setup.py
+        python3 setup.py
    ```
 **Enjoy : - )**
