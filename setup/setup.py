@@ -24,11 +24,15 @@ def Logo():
                                                                                                         Made By 0x01sky
           """)
 
+# Packages listed to be installed
+
 Packages = [
     "picom", "polybar", "neovim", "zathura",
     "brightnessctl", "xinput", "starship",
-    "rofi", "fastfetch"
+    "rofi", "fastfetch", "btop"
 ]
+
+# Links for the nerd fonts and the dotfiles
 
 links = [
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip",
