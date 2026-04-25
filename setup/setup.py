@@ -1,4 +1,4 @@
-# If there is any issue regarding the script make sure to report the issue on https://github.com/0x01sky/dotfiles
+# If there is any issue regarding the script make sure to open an issue on https://github.com/0x01sky/dotfiles
 
 import subprocess as sb
 from pathlib import Path
@@ -33,7 +33,8 @@ def Logo():
 Packages = [
     "picom", "polybar", "neovim", "zathura",
     "brightnessctl", "xinput", "starship",
-    "rofi", "fastfetch", "btop", "flameshot"
+    "rofi", "fastfetch", "btop", "flameshot",
+    "cava", "ghostty"
 ]
 
 # Links for the nerd fonts and the dotfiles
@@ -50,6 +51,10 @@ home = Path.home()
 fonts_dir = home / ".local/share/fonts"
 downloads_dir = home / "Downloads/Fonts"
 wallpapers_dir = home / "Pictures/Wallpapers"
+
+def copr_ghostty():
+    lg.info("Adding Ghostty copr repository..")
+    sb.run(["sudo", "dnf", "copr", "enable", "scottames/ghostty"], check=True)
 
 def inst():
     lg.info("Installing packages...")
@@ -79,11 +84,12 @@ def clone_repo():
 def copy_configs():
     config_src = home / "dotfiles/config"
     
-    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch"]:
+    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
 
 def main():
     Logo()
+    copr_ghostty()
     inst()
     setup_dirs()
     download_fonts()
