@@ -34,7 +34,7 @@ Packages = [
     "picom", "polybar", "neovim", "zathura",
     "brightnessctl", "xinput", "starship",
     "rofi", "fastfetch", "btop", "flameshot",
-    "cava", "ghostty"
+    "cava", "ghostty", "fish"
 ]
 
 # Links for the nerd fonts and the dotfiles
@@ -80,7 +80,7 @@ def clone_repo():
 def copy_configs():
     config_src = home / "dotfiles/config"
     
-    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava"]:
+    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
 
 def main():
@@ -93,7 +93,7 @@ def main():
     clone_repo()
     copy_configs()
 
-    lg.info("Setup complete!")
+    lg.info("Setup complete! Please make sure to run 'chsh -s /bin/fish' in order to change your shell to fish !")
 
 if __name__ == "__main__":
     main()

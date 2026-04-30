@@ -98,7 +98,7 @@ def main():
     clone_repo()
     copy_configs()
 
-    lg.info("Setup complete!")
+    lg.info("Setup complete, make sure to run 'chsh -s /bin/fish' to change your shell to fish shell !")
 
 if __name__ == "__main__":
     main()

@@ -22,6 +22,7 @@
   ```bash
         git clone https://github.com/0x01sky/dotfiles && cd dotfiles
         cp -r .config/{i3,rofi,polybar,ghostty,zathura,picom,cava,fish} "$HOME/.config/"
+        chsh -s /bin/fish  # to change your shell to fish
   ```
   - Automated
    ```bash
