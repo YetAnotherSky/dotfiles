@@ -30,7 +30,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/Wallpapers/nord/10.png --nofork
 # screen idle after 10 minites using xautolock
-exec_always --no-startup-id xautolock -time 10 -locker "i3lock -i ~/Pictures/Wallpapers/nord/10.png"
+exec_always --no-startup-id xautolock -time 15 -locker "i3lock -i ~/Pictures/Wallpapers/nord/10.png"
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -38,6 +38,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec_always --no-startup-id xinput set-prop "ASUF1204:00 2808:0202 Touchpad" "libinput Tapping Enabled" 1
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/nord/20.png
+exec_always --no-startup-id picom
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -124,8 +125,8 @@ bindsym Control+Shift+E exec librewolf
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
-
-
+# touchpad settings
+bindsym XF86TouchpadToggle exec ruby ~/.config/i3/scripts/touchpad-toggle.rb
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
