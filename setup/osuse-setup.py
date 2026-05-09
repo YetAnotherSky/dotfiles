@@ -42,7 +42,7 @@ Packages = [
 links = [
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip",
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip",
-    "https://github.com/0x01sky/dotfiles"
+    "https://github.com/0x01sky/dotfiles",
     "https://github.com/tmux_plugins/tpm"
 ]
 
@@ -77,7 +77,7 @@ def install_fonts():
     sb.run(["fc-cache", "-fv"], check=True)
 
 def clone_repo():
-    sb.run(["git", "clone", links[2], str(home)], check=True)
+    sb.run(["git", "clone", links[2]], check=True)
 
 def copy_configs():
     config_src = home / "dotfiles/.config"
@@ -85,6 +85,7 @@ def copy_configs():
     for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
     
+def tmux_repo():
     sb.run(["git", "clone", links[3], str(tmux_tpm)], check=True);
 
 def main():
@@ -96,6 +97,7 @@ def main():
     install_fonts()
     clone_repo()
     copy_configs()
+    tmux_repo()
 
     lg.info("""
     Setup complete! Please make sure to run 'chsh -s /bin/fish' in order to change your shell to fish !
