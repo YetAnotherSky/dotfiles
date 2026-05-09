@@ -82,7 +82,7 @@ def clone_repo():
 def copy_configs():
     config_src = home / "dotfiles/.config"
     
-    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop"]:
+    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
     
     sb.run(["git", "clone", links[3], str(tmux_tpm)], check=True);
