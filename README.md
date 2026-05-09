@@ -8,7 +8,7 @@
 ![Preview 2](preview/2026-05-09_12-43.png)
 
 ## Requirements ❗:
-```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, tmux, cava, fish, JetBrainsMono and FiraCode Nerd Fonts```
+```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, tmux, cava, btop, fish, JetBrainsMono and FiraCode Nerd Fonts```
  - Link for starship: https://starship.rs/
  - Links for Nerd Fonts:
      - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
@@ -20,7 +20,7 @@
   - Manual
   ```bash
         git clone https://github.com/0x01sky/dotfiles && cd dotfiles
-        cp -r .config/{i3,rofi,polybar,ghostty,zathura,picom,cava,fish,tmux} "$HOME/.config/"
+        cp -r .config/{i3,rofi,polybar,ghostty,zathura,picom,cava,fish,tmux,btop} "$HOME/.config/"
         chsh -s /bin/fish  # to change your shell to fish
   ```
   - Automated
