@@ -43,6 +43,7 @@ links = [
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip",
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip",
     "https://github.com/0x01sky/dotfiles"
+    "https://github.com/tmux-plugins/tpm"
 ]
 
 files = ["JetBrainsMono.zip", "FiraCode.zip"]
@@ -51,6 +52,7 @@ home = Path.home()
 fonts_dir = home / ".local/share/fonts"
 downloads_dir = home / "Downloads/Fonts"
 wallpapers_dir = home / "Pictures/Wallpapers"
+tmux_tpm = home / ".config/tmux/plugins/tpm"
 
 def copr_ghostty():
     lg.info("Adding Ghostty copr repository..")
@@ -87,6 +89,8 @@ def copy_configs():
     for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
 
+    sb.run(["git", "clone", links[3], str(tmux_tpm)], check=True)
+
 def main():
     Logo()
     copr_ghostty()
@@ -98,7 +102,10 @@ def main():
     clone_repo()
     copy_configs()
 
-    lg.info("Setup complete, make sure to run 'chsh -s /bin/fish' to change your shell to fish shell !")
+    lg.info("""
+            Setup complete, make sure to run 'chsh -s /bin/fish' to change your shell to fish shell !, also make sure to run "Ctrl +
+            B + Shift + I" to install tmux plugins and nord theme !
+            """)
 
 if __name__ == "__main__":
     main()

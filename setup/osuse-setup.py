@@ -43,6 +43,7 @@ links = [
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip",
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip",
     "https://github.com/0x01sky/dotfiles"
+    "https://github.com/tmux_plugins/tpm"
 ]
 
 files = ["JetBrainsMono.zip", "FiraCode.zip"]
@@ -51,6 +52,7 @@ home = Path.home()
 fonts_dir = home / ".local/share/fonts"
 downloads_dir = home / "Downloads/Fonts"
 wallpapers_dir = home / "Pictures/Wallpapers"
+tmux_tpm = home / ".config/tmux/plugins/tpm"
 
 def inst():
     lg.info("Installing packages...")
@@ -82,6 +84,8 @@ def copy_configs():
     
     for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
+    
+    sb.run(["git", "clone", links[3], str(tmux_tpm)], check=True);
 
 def main():
     Logo()
@@ -93,7 +97,10 @@ def main():
     clone_repo()
     copy_configs()
 
-    lg.info("Setup complete! Please make sure to run 'chsh -s /bin/fish' in order to change your shell to fish !")
+    lg.info("""
+    Setup complete! Please make sure to run 'chsh -s /bin/fish' in order to change your shell to fish !
+    Make sure to run 'Ctrl + B + Shift + I' to install tmux plugins and themes !
+            """)
 
 if __name__ == "__main__":
     main()
