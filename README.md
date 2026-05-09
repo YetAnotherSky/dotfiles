@@ -4,9 +4,8 @@
 
 ## Preview ✨:
 
-<img width="1919" height="1078" alt="2026-03-28_22-53" src="https://github.com/user-attachments/assets/576f6eaa-0fea-457c-acae-00293101bd21" />
-
-<img width="1919" height="1079" alt="2026-03-25_02-42" src="https://github.com/user-attachments/assets/86187573-e6ce-47ec-8f86-ec60dcd65f33" />
+![Preview 1](preview/2026-05-09_12-23.png)
+![Preview 2](preview/2026-05-09_12-43.png)
 
 ## Requirements ❗:
 ```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, tmux, cava, fish, JetBrainsMono and FiraCode Nerd Fonts```
