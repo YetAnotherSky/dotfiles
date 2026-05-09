@@ -7,7 +7,7 @@
 ![Preview 1](preview/2026-05-09_12-23.png)
 ![Preview 2](preview/2026-05-09_12-43.png)
 ![Preview 3](preview/2026-05-09_16-43.png)
-![Preview 4](preview/2026-05-09_16_43_1.png)
+![Preview 4](preview/2026-05-09_16-43_1.png)
 
 ## Requirements ❗:
 ```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, tmux, cava, btop, fish, JetBrainsMono and FiraCode Nerd Fonts```
