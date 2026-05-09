@@ -18,11 +18,11 @@ if x =~ /id=(\d+)/i
 		if state == "1"
 			puts "disabling Touchpad"
 			`xinput disable #{id}`
-			notify("Touch Disabled")
+			notify("Touchpad Disabled")
 		else
 			puts "enabling Touchpad"
 			`xinput enable #{id}`
-			notify("Touchbad Enabled")
+			notify("Touchpad Enabled")
 		end
 	else
 		puts "Can't detect touchpad state"
