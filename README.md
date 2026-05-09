@@ -9,7 +9,7 @@
 <img width="1919" height="1079" alt="2026-03-25_02-42" src="https://github.com/user-attachments/assets/86187573-e6ce-47ec-8f86-ec60dcd65f33" />
 
 ## Requirements ❗:
-```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, cava, fish, JetBrainsMono and FiraCode Nerd Fonts```
+```picom, starship, xautolock, xinput (to list your input devices that would be used for i3 config file) , rofi, polybar, zathura, nvim, >= 0.11, ghostty, tmux, cava, fish, JetBrainsMono and FiraCode Nerd Fonts```
  - Link for starship: https://starship.rs/
  - Links for Nerd Fonts:
      - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
@@ -21,7 +21,7 @@
   - Manual
   ```bash
         git clone https://github.com/0x01sky/dotfiles && cd dotfiles
-        cp -r .config/{i3,rofi,polybar,ghostty,zathura,picom,cava,fish} "$HOME/.config/"
+        cp -r .config/{i3,rofi,polybar,ghostty,zathura,picom,cava,fish,tmux} "$HOME/.config/"
         chsh -s /bin/fish  # to change your shell to fish
   ```
   - Automated
@@ -29,6 +29,6 @@
         wget https://raw.githubusercontent.com/0x01sky/dotfiles/main/setup/setup.py
         python3 setup.py
    ```
-   *Note* : if you wish to update the dotfiles using automated installation, you should keep the script !
+   *Note* : if you wish to update the dotfiles using automated installation, you should keep the script!
 
 **Enjoy : - )**
