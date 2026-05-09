@@ -22,7 +22,7 @@
   - Manual
   ```bash
         git clone https://github.com/0x01sky/dotfiles && cd dotfiles
-        cp -r .config/{i3,rofi,polybar,ghostty,zathura,picom,cava,fish,tmux,btop} "$HOME/.config/"
+        cp -r .config/{i3,rofi,polybar,ghostty,zathura,picom,cava,fish,tmux,btop,dunst} "$HOME/.config/"
         git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm  # to install tmux plugins which is necessary to install the themes
         chsh -s /bin/fish  # to change your shell to fish
   ```
