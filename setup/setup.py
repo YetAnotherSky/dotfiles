@@ -51,7 +51,7 @@ files = ["JetBrainsMono.zip", "FiraCode.zip"]
 home = Path.home()
 fonts_dir = home / ".local/share/fonts"
 downloads_dir = home / "Downloads/Fonts"
-wallpapers_dir = home / "Pictures/Wallpapers"
+wallpapers_dir = home / "Pictures"
 tmux_tpm = home / ".config/tmux/plugins/tpm"
 
 def copr_ghostty():
@@ -65,7 +65,6 @@ def inst():
 def setup_dirs():
     fonts_dir.mkdir(parents=True, exist_ok=True)
     downloads_dir.mkdir(parents=True, exist_ok=True)
-    wallpapers_dir.mkdir(parents=True, exist_ok=True)
 
 def download_fonts():
     sb.run(["wget", *links[:2]], cwd=downloads_dir, check=True)
@@ -86,8 +85,12 @@ def clone_repo():
 def copy_configs():
     config_src = home / "dotfiles/.config"
     
-    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
+    for folder in [ "i3", "polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
+
+def copy_wallpapers():
+    config_src = home / "dotfiles/.config"
+    sb.run(["cp", "-r", str(config_src), str(wallpapers_dir)], check=True)
 
 def tmux_repo():
     sb.run(["git", "clone", links[3], str(tmux_tpm)], check=True)
@@ -102,6 +105,7 @@ def main():
     install_fonts()
     clone_repo()
     copy_configs()
+    copy_wallpapers()
     tmux_repo()
 
     lg.info("""
