@@ -34,7 +34,7 @@ Packages = [
     "picom", "polybar", "neovim", "zathura",
     "brightnessctl", "xinput", "starship",
     "rofi", "fastfetch", "btop", "flameshot",
-    "cava", "ghostty", "fish", "tmux"
+    "cava", "ghostty", "fish", "tmux", "btop"
 ]
 
 # Links for the nerd fonts and the dotfiles
@@ -82,9 +82,9 @@ def clone_repo():
     sb.run(["git", "clone", links[2], str(home)], check=True)
 
 def copy_configs():
-    config_src = home / "dotfiles/config"
+    config_src = home / "dotfiles/.config"
     
-    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux"]:
+    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
 
 def main():
