@@ -32,9 +32,9 @@ def Logo():
 
 Packages = [
     "picom", "polybar", "neovim", "zathura",
-    "brightnessctl", "xinput", "starship",
-    "rofi", "fastfetch", "btop", "flameshot",
-    "cava", "ghostty", "fish", "tmux", "btop"
+    "brightnessctl", "xinput","rofi", "fastfetch", 
+    "btop", "flameshot","cava", "ghostty", 
+    "fish", "tmux", "btop"
 ]
 
 # Links for the nerd fonts and the dotfiles
