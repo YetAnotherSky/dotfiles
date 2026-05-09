@@ -6,7 +6,7 @@
 
 ![Preview 1](preview/2026-05-09_12-23.png)
 ![Preview 2](preview/2026-05-09_12-43.png)
-![Preview 3](preview/2026-05-09_16-43.png)
+![Preview 3](preview/2026-05-09_19-35.png)
 ![Preview 4](preview/2026-05-09_16-43_1.png)
 
 ## Requirements ❗:
