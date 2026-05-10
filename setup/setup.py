@@ -87,8 +87,52 @@ def clone_repo():
 def copy_configs():
     config_src = home / "dotfiles/.config"
     
-    for folder in [ "i3", "polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
+    for folder in ["polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
+    
+def i3_config():
+    config_src = home / "dotfiles/.config"
+    rnmd_i3 = home / ".config/i3/config"
+    i3_azerty = home / ".config/i3/config-azerty"
+    i3_qwerty = home / ".config/i3/config-qwerty"
+
+    try:
+        option = int(input("""
+What kb layout config do you wish to have in your i3 config?
+  1. AZERTY
+  2. QWERTY
+> """))
+
+        match option:
+            case 1:
+                sb.run(
+                    ["cp", "-r", str(config_src / "i3/{config-azerty, scripts}"),
+                     str(home / ".config/i3")],
+                    check=True
+                )
+
+                sb.run(
+                    ["mv", str(i3_azerty), str(rnmd_i3)],
+                    check=True
+                )
+
+            case 2:
+                sb.run(
+                    ["cp", "-r", str(config_src / "i3/{config-qwerty, scripts}"),
+                     str(home / ".config/i3")],
+                    check=True
+                )
+
+                sb.run(
+                    ["mv", str(i3_qwerty), str(rnmd_i3)],
+                    check=True
+                )
+
+            case _:
+                print("Invalid choice.")
+
+    except ValueError:
+        print("Please enter a number.")
 
 def copy_wallpapers():
     config_src = home / "dotfiles/.config/Wallpapers"
@@ -114,6 +158,7 @@ def main():
     install_fonts()
     clone_repo()
     copy_configs()
+    i3_config()
     copy_wallpapers()
     tmux_repo()
     starship_install()
