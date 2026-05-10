@@ -43,7 +43,8 @@ links = [
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip",
     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip",
     "https://github.com/0x01sky/dotfiles",
-    "https://github.com/tmux-plugins/tpm"
+    "https://github.com/tmux-plugins/tpm",
+    "https://starship.rs/install.sh"
 ]
 
 files = ["JetBrainsMono.zip", "FiraCode.zip"]
@@ -95,6 +96,13 @@ def copy_wallpapers():
 def tmux_repo():
     sb.run(["git", "clone", links[3], str(tmux_tpm)], check=True)
 
+def starship_install():
+    curl = sb.Popen(
+    ["curl", "-sS", links[4]],
+    stdout=sb.PIPE
+    )
+    sb.run(["sh"], stdin=curl.stdout, check=True)
+
 def main():
     Logo()
     copr_ghostty()
@@ -107,10 +115,12 @@ def main():
     copy_configs()
     copy_wallpapers()
     tmux_repo()
+    starship_install()
 
     lg.info("""
-            Setup complete, make sure to run 'chsh -s /bin/fish' to change your shell to fish shell !, also make sure to run "Ctrl +
-            B + Shift + I" to install tmux plugins and nord theme !
+            Setup complete ! 
+            - make sure to run 'chsh -s /bin/fish' to change your shell to fish shell for changes to take effects !
+            - make sure to run "Ctrl + B + Shift + I" to install tmux plugins and nord theme !
             """)
 
 if __name__ == "__main__":
