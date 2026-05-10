@@ -32,5 +32,6 @@
         python3 setup.py
    ```
    *Note* : if you wish to update the dotfiles using automated installation, you should keep the script!
-
+   *Important* : If you encounter a problmen when switching windows, the i3 config file has the french kb layout config which has azerty layout which i generally use, you may need to modify the i3 script yourself!
+    
 **Enjoy : - )**
