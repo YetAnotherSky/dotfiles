@@ -34,7 +34,8 @@ Packages = [
     "picom", "polybar", "neovim", "zathura",
     "brightnessctl", "xinput","rofi", 
     "fastfetch", "btop", "flameshot",
-    "cava", "ghostty", "fish", "tmux", "btop"
+    "cava", "ghostty", "fish", "tmux", "btop",
+    "git"
 ]
 
 # Links for the nerd fonts and the dotfiles
