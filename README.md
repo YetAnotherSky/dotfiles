@@ -31,7 +31,8 @@
         wget https://raw.githubusercontent.com/0x01sky/dotfiles/main/setup/setup.py
         python3 setup.py
    ```
-   *Note* : if you wish to update the dotfiles using automated installation, you should keep the script!
-   **Important !** : if you copied i3 config files to your .config directory, make sure to choose what config file to choose depending on your kb layout as the default won't work if you have qwerty layout !  
+   - *Note* : if you wish to update the dotfiles using automated installation, you should keep the script!
+   
+   - **Important !** : if you copied i3 config files to your .config directory, make sure to choose what config file to choose depending on your kb layout as the default won't work if you have qwerty layout !  
     
 **Enjoy : - )**
