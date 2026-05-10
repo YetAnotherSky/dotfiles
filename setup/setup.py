@@ -86,7 +86,7 @@ def clone_repo():
 def copy_configs():
     config_src = home / "dotfiles/.config"
     
-    for folder in ["polybar", "rofi", "ghostty", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
+    for folder in ["polybar", "rofi", "ghostty", "zathura", "picom", "fastfetch", "cava", "fish", "starship.toml", "tmux", "btop", "dunst"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
     
 def i3_config():
