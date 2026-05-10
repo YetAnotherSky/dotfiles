@@ -82,7 +82,7 @@ def clone_repo():
 def copy_configs():
     config_src = home / "dotfiles/.config"
     
-    for folder in ["i3", "polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
+    for folder in ["i3", "ghostty", "polybar", "rofi", "zathura", "picom", "fastfetch", "cava", "fish", "tmux", "btop", "dunst"]:
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
     
 def copy_wallpapers():
