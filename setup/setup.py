@@ -91,7 +91,7 @@ def copy_configs():
         sb.run(["cp", "-r", str(config_src / folder), str(home / ".config")], check=True)
 
 def copy_wallpapers():
-    config_src = home / "dotfiles/.config"
+    config_src = home / "dotfiles/.config/Wallpapers"
     sb.run(["cp", "-r", str(config_src), str(wallpapers_dir)], check=True)
 
 def tmux_repo():
