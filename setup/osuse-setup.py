@@ -99,6 +99,7 @@ def starship_install():
     )
     sb.run(["sh"], stdin=curl.stdout, check=True)
 
+
 def i3_config():
     config_src = home / "dotfiles/.config"
     rnmd_i3 = home / ".config/i3/config"
@@ -115,9 +116,15 @@ What kb layout config do you wish to have in your i3 config?
         match option:
             case 1:
                 sb.run(
-                    ["cp", "-r", str(config_src / "i3/{config-azerty, scripts}"),
+                    ["cp", "-r", str(config_src / "i3/config-azerty"),
                      str(home / ".config/i3")],
                     check=True
+                )
+
+                sb.run(
+                        ["cp", "-r", str(config_src / "i3/scripts"),
+                        str(home / ".config/i3")],
+                       check=True
                 )
 
                 sb.run(
@@ -127,7 +134,13 @@ What kb layout config do you wish to have in your i3 config?
 
             case 2:
                 sb.run(
-                    ["cp", "-r", str(config_src / "i3/{config-qwerty, scripts}"),
+                    ["cp", "-r", str(config_src / "i3/config-qwerty"),
+                     str(home / ".config/i3")],
+                    check=True
+                )
+
+                sb.run(
+                    ["cp", "-r", str(config_src / "i3/scripts"),
                      str(home / ".config/i3")],
                     check=True
                 )
@@ -142,6 +155,7 @@ What kb layout config do you wish to have in your i3 config?
 
     except ValueError:
         print("Please enter a number.")
+
 
 def main():
     Logo()
