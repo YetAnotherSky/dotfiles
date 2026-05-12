@@ -1,6 +1,6 @@
 # [UPDATE !] dotfiles (. 📁)
 
-- My Fedora i3 dotfiles (Nord Theme)
+- My Fedora i3wm dotfiles (Nord Theme)
 
 ## Preview ✨:
 
