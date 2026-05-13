@@ -36,7 +36,7 @@ exec_always --no-startup-id xautolock -time 15 -locker "i3lock -i ~/Pictures/Wal
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
-exec_always --no-startup-id xinput set-prop 9 libinput Tapping Enabled" 1
+exec_always --no-startup-id xinput set-prop 9 "libinput Tapping Enabled" 1
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/nord/20.png
 exec_always --no-startup-id picom
 # Use pactl to adjust volume in PulseAudio.
